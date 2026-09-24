@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -39,10 +39,10 @@ export function Navbar() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link
           href="/"
-          className="font-serif text-xl tracking-tight text-ink"
+          className="flex items-center"
           onClick={() => setMenuOpen(false)}
         >
-          AKSSADA
+          <span className="font-serif text-xl tracking-tight text-ink">AKSSADA</span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -55,9 +55,10 @@ export function Navbar() {
               {item.label}
             </Link>
           ))}
+
           <Link
             href="/volunteer"
-            className="rounded-sm bg-terracotta px-4 py-2 text-[15px] text-cream transition-colors hover:bg-terracotta-deep"
+            className="rounded-sm bg-terracotta px-4 py-2 text-white transition-colors hover:bg-terracotta-deep"
           >
             Get Involved
           </Link>
@@ -99,9 +100,10 @@ export function Navbar() {
               {item.label}
             </Link>
           ))}
+
           <Link
             href="/volunteer"
-            className="mt-3 rounded-sm bg-terracotta px-4 py-3 text-center text-[15px] text-cream"
+            className="rounded-sm bg-terracotta px-4 py-2 text-white transition-colors hover:bg-terracotta-deep"
             onClick={() => setMenuOpen(false)}
           >
             Get Involved
@@ -111,3 +113,10 @@ export function Navbar() {
     </header>
   );
 }
+
+
+
+
+
+
+
