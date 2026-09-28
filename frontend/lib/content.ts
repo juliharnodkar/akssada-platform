@@ -11,7 +11,7 @@ export const org = {
   fullName:
     "All Karnataka Siddi Social & Aspirational Diversification Association",
   mission:
-    "AKSSADA is a Section 8 non-profit working alongside the Siddi community and other forest-dwelling communities in Karnataka to build sustainable livelihoods, expand access to education, protect cultural heritage, and strengthen the environment they depend on.",
+    "AKSSADA is a community-focused initiative working alongside the Siddi community in Karnataka to create opportunities in education, sustainable livelihoods, youth development, and community growth.",
 };
 
 export type FocusArea = {
