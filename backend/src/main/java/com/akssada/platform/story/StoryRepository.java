@@ -9,5 +9,7 @@ public interface StoryRepository extends JpaRepository<Story, UUID> {
 
     List<Story> findAllByPublishedTrueOrderByPublishedAtDesc();
 
+    List<Story> findAllByOrderByCreatedAtDesc();
+
     Optional<Story> findBySlugAndPublishedTrue(String slug);
 }

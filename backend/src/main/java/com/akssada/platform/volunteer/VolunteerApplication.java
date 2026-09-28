@@ -113,6 +113,10 @@ public class VolunteerApplication {
         return status;
     }
 
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     public OffsetDateTime getSubmittedAt() {
         return submittedAt;
     }

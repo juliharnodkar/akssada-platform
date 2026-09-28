@@ -6,6 +6,7 @@ import com.akssada.platform.initiative.InitiativeRepository;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.OffsetDateTime;
@@ -14,6 +15,7 @@ import java.util.UUID;
 
 @RestController
 @RequestMapping("/api/admin/blog")
+@Transactional
 public class AdminStoryController {
 
     private final StoryRepository storyRepository;
@@ -26,7 +28,7 @@ public class AdminStoryController {
 
     @GetMapping
     public List<StoryDetailDto> listAll() {
-        return storyRepository.findAll().stream()
+        return storyRepository.findAllByOrderByCreatedAtDesc().stream()
                 .map(StoryDetailDto::from)
                 .toList();
     }
